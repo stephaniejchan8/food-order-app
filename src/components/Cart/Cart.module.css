@@ -1,0 +1,12 @@
+.cart {
+  background: rgba(0, 0, 0, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.counter {
+  background: rgb(19, 159, 181);
+
+}
