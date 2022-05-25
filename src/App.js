@@ -1,11 +1,15 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
     <React.Fragment>
       <Header />
+      <main className={styles.main}>
+        <Menu />
+      </main>
     </React.Fragment>
   );
 }

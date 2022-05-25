@@ -1,12 +1,23 @@
 .cart {
-  background: rgba(0, 0, 0, 0.26);
+  background: rgba(0, 0, 0, 0.36);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 0.6rem 2.5rem;
 }
 
 .counter {
   background: rgb(19, 159, 181);
+  padding: 0.4rem 1rem;
+}
 
+.cart, .counter {
+  border-radius: 22px;
+}
+
+.cart p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
