@@ -1,8 +1,17 @@
 .menu {
   background: white;
-  height: 30vh;
   top: 30vh;
   position: relative;
   color: black;
-  width: 65vw;
+  width: 85vw;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+@media (min-width: 1068px) {
+  .menu {
+    width: 65vw;
+  }
 }

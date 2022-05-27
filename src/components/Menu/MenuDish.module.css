@@ -1,0 +1,12 @@
+.dish, .price {
+  font-weight: bold;
+}
+
+.description {
+  font-style: italic;
+}
+
+.price {
+  color: rgb(150, 82, 55);
+  font-size: 1.1rem;
+}
