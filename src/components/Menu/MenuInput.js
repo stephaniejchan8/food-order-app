@@ -5,7 +5,7 @@ const MenuInput = () => {
   return (
     <div className={styles['add-item']}>
       <label htmlFor="amount">Amount</label>
-      <input type="number" id="amount" />
+      <input type="number" id="amount" defaultValue="1" /> <br />
       <Button>
         + Add
       </Button>

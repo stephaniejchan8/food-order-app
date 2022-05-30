@@ -16,9 +16,9 @@
 
 .add-item input:focus {
   outline: 1px solid rgb(74, 148, 169);
-
 }
 
 .add-item button {
-  display: block;
+  margin-top: 0.5rem;
+  width: 6.7rem;
 }

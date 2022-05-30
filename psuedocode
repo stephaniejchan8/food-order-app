@@ -1,6 +1,6 @@
 MENU ITEM
 
-1. In Context component, create an array of objects to store each menu item
+!1. In Context component, create an array of objects to store each menu item
 2. each menu item should be a list item with a key (to link quantity with cart state) - useReducer, Context
 3. create a ref for each input amount
 4. read user input value (default 1) and add item to a new cart array on button click
