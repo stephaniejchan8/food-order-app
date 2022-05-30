@@ -1,11 +1,37 @@
-import React from "react";
+import React, {useReducer} from "react";
 
 const MenuContext = React.createContext({
     menuList: [],
-    updateCart: () => {}
+    cart: {},
+    sushiHandler: () => {}
   });
 
 export const MenuContextProvider = (props) => {
+  const cartReducer = (state, action) => {
+    if (action.type === 'SUSHI') {
+      return {
+        sushi: +state.sushi + +action.quantity, 
+        schnitzel: state.schnitzel,
+        burger: state.burger,
+        bowl: state.bowl
+      };
+    }
+  };
+
+  const [cartState, dispatchCart] = useReducer(cartReducer, {
+    sushi: '',
+    schnitzel: '',
+    burger: '',
+    bowl: ''
+  });
+
+  const sushiHandler = quantity => {
+    dispatchCart({
+      type: 'SUSHI',
+      quantity: quantity
+    });
+  };
+
   const menuList = [
     {
       id: 1,
@@ -30,14 +56,13 @@ export const MenuContextProvider = (props) => {
     }
   ];
 
-  const tempFunction = () => {
-    console.log('test');
-  };
+
 
   return (
     <MenuContext.Provider value={{
       menuList: menuList,
-      updateCart: tempFunction
+      cart: cartState,
+      sushiHandler: sushiHandler
     }}>
       {props.children}
     </MenuContext.Provider>
